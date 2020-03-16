@@ -3,7 +3,7 @@
 interface
 type vec = array of real;
 procedure readVec(var x: vec; f:textfile);
-procedure writeVec(var x: vec; f:textfile);
+procedure writeVec(const x: vec; f:textfile);
 
 implementation
 
@@ -18,11 +18,13 @@ begin
 end;
 
 
-procedure writeVec(var x: vec; f:textfile);
+procedure writeVec(const x: vec; f:textfile);
+var i: integer;
 begin
-	for i:integer := 0 to High(x) do begin
-		//write(x[i], '  ');
-		write(f, x[i]);
+ 	for i := 0 to High(x) do begin
+		write(x[i], '  ');
+		writeln(f, 'suck my dick');
+		write(f, x[i], '  ');
 	end;
 	writeln(f);
 end;
