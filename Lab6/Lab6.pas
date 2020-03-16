@@ -28,7 +28,7 @@ begin
 			readVec(a,fin);
 			writeVec(a,fout);
 			if not areInInterval(a, 0, intervalBegin,intervalEnd) then begin
-				thisSum := sum(a);
+				thisSum := sum(a, 0, High(a));
 				writeln(fout,'Sum = ', thisSum);
 			end
 			else writeln(fout, 'Array has elements with abs in range: ', 

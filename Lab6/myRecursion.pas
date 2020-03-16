@@ -5,7 +5,7 @@ type vec = array of real;
 procedure readVec(var x: vec; f:textfile);
 procedure writeVec(const x: vec; f:textfile);
 function areInInterval(const x: vec; startIndex: integer; intervalBegin,intervalEnd:real):boolean;
-function sum(const x: vec):real;
+function sum(const x: vec; startIndex,stopIndex: integer):real;
 
 
 implementation
@@ -44,11 +44,20 @@ begin
 	writeln(f);
 end;
 
-function sum(const x: vec):real;
+function sum(const x: vec; startIndex,stopIndex: integer):real;
 begin
-	result := 0;
-	for i:integer :=0 to High(x) do begin
-		if power(x[i],2) > i then result += x[i];
+
+	if startIndex = stopIndex then begin
+		if power(x[startIndex],2) > startIndex then result := x[startIndex]
+		else result := 0; 
+	end
+	else
+	begin
+		if power(x[startIndex],2) > startIndex then begin
+			result := 	sum(x, startIndex, ((startIndex+stopIndex) div 2) ) +
+						sum(x, ((startIndex+stopIndex) div 2) + 1, stopIndex );
+		end
+		else result := sum(x, startIndex + 1, stopIndex );
 	end;
 end;
 
