@@ -1,8 +1,10 @@
-program lab6;
+﻿program lab6;
 
 uses myRecursion;
 
 var fin,fout: textfile;
+	a: vec;
+	n: integer;
 
 begin
 	try
@@ -10,8 +12,13 @@ begin
 		reset(fin);
 		assignfile(fout,ParamStr(2));
 		rewrite(fout);
+		readVec(a,fin);
+		writeVec(a,fout);
+		
+
 	except
 	on System.IndexOutOfRangeException do writeln('Недостаточно параметров');
 	on System.IO.FileNotFoundException do writeln('Невозможно открыть файл');
-		
+	end;
+    
 end.
