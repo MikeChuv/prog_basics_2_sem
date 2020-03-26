@@ -36,6 +36,18 @@ begin
 end;
 {===========================================================}
 {===========================================================}
+function f3( var x,y,z: byte ):byte ;
+begin
+	result := x xor y xor z;
+end;
+{===========================================================}
+{===========================================================}
+function f4( var x,y,z: byte ):byte ;
+begin
+	result := y xor (not z or x);
+end;
+{===========================================================}
+{===========================================================}
 procedure readMySetArray(var x:SetsArray;var n: integer; f:textfile);
 var 	ch:char;
 	i: integer;
@@ -75,10 +87,11 @@ var
 begin
 	result := 0;//empty;
 	i := 1;
-	foreach ch in s do
-	begin
-		result := result - (ord(ch) shl i);
-		i := i + 1;
+	for ch:= chr(0) to chr(255) do begin
+    if ch in s then begin  
+		  result := result - (ord(ch) shl i);
+		  i := i + 1;
+		  end;
 	end;
 end;
 {===========================================================}
@@ -105,12 +118,18 @@ begin
 	b := $89ABCDEF;
 	c := $FEDCBA98;
 	d := $76543210;
-	foreach ch in s do begin
-		a := a + f1(b,c,d) + ord(ch);
-		a := (a shl 1) or (a shr 7);
-		b := b + f2(a,c,d) + ord(ch);
-		b := (b shl 3) or (b shr 5);
-	end;
+	for ch:= chr(0) to chr(255) do begin
+    if ch in s then begin
+      a := a + f1(b,c,d) + ord(ch);
+  		a := (a shl 1) or (a shr 7);
+  		b := b + f2(a,c,d) + ord(ch);
+  		b := (b shl 3) or (b shr 5);
+  		c := c + f3(a,b,d) + ord(ch);
+  		c := (a shl 5) or (a shr 3);
+  		d := d + f4(a,b,c) + ord(ch);
+  		d := (b shl 7) or (b shr 1);
+    end;
+  end;
 	result := a;
 	result := (result shl 8) or b;
 	result := (result shl 8) or c;
@@ -119,35 +138,20 @@ end;
 {===========================================================}
 {===========================================================}
 procedure findCollsEquals( const csets: SetsArray;const n: integer; var colls,equals: integer; f:func );
-var 	fl_1, fl_2: boolean;
-	    ch: char;
+var 	runPercent : real;
       thisHashArray: hashArray;
+      
 begin
 	colls := 0;
 	equals := 0;
 	for i:integer := 1 to n do thisHashArray[i] := f(csets[i]);
 	for i:integer := 1 to n-1 do begin
+    runPercent := (100 / n)*i;
+    writeln('Running: ', runPercent:6:3,'%');
 		for j:integer := i+1 to n do begin
 			if thisHashArray[i] = thisHashArray[j] then begin
-				colls := colls + 1;
-				fl_1 := true;
-				fl_2 := true;
-				foreach ch in csets[i] do begin
-					if not(ch in csets[j]) then begin
-						fl_1 := false;
-						break;
-					end;	
-				end;
-				foreach ch in csets[j] do begin
-					if not(ch in csets[i]) then begin
-						fl_2 := false;
-						break;
-					end;	
-				end;
-				if fl_1 and fl_2 then begin
-					equals := equals + 1;
-					colls := colls - 1;
-				end;
+				if csets[i] = csets[j] then equals += 1
+				else colls += 1;
 			end;
 		end;		
 	end;
@@ -156,8 +160,7 @@ end;
 {===========================================================}
 {===========================================================}
 procedure findEqualsColls( const csets: SetsArray;const n: integer; var colls,equals: integer; f:func );
-var 	fl_1, fl_2: boolean;
-	    ch: char;
+var 	ch: char;
       thisHashArray: hashArray;
       debug: textfile;
 begin
