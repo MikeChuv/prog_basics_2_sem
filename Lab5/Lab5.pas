@@ -6,7 +6,7 @@ program lab5;
 uses myDynamicArray;
 
 var 	a: mas;
-	b: vec;
+		b: vec;
     	fin, fout : textfile;
     	an, am, l : integer;
     	k, max: real;
