@@ -15,10 +15,10 @@
 
 
 #### Входная форма
-Строка 1
-Строка 2
-...
-Строка n 
+Строка 1 \
+Строка 2 \
+... \
+Строка n
 #### Выходная форма
 Для каждой строки: 
 - Строка 1 
@@ -28,22 +28,22 @@
 - Недостаточно параметров.
 - Невозможно открыть файл для чтения.
 #### Тестовые примеры
-**Входные данные**
-hello my    dear friend
-how  are you
-i will write 2 more words
-**Результат**
-hello my    dear friend
-hello friend
-my dear
-################
-how  are you
-how you
-are
-###############
-i will write 2 more words
-i words
-will more
+**Входные данные** \
+hello my    dear friend \
+how  are you \
+i will write 2 more words \
+**Результат** \
+hello my    dear friend \
+hello friend \
+my dear \
+################ \
+how  are you \
+how you \
+are \
+############### \
+i will write 2 more words \
+i words \
+will more \
 write 2
 
 #### Метод

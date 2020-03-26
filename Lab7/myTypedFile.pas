@@ -14,7 +14,8 @@ begin
 	rewrite(ftyped);
 	while not eof(ftext) do begin
 		read(ftext, num);
-		write(ftyped, num);
+		if (num > -9.9) and (num < 9.9) then
+			write(ftyped, num);
 	end;
 	closefile(ftyped);
 end;

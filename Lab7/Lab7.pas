@@ -10,7 +10,6 @@ const 	INDEX_EXCEPTION = 'Недостаточно параметров';
 		IO_EXCEPTION = 'Попытка считывания за концом текстового файла. Попробуйте убрать пробел или пустую строку в конце файла';
 
 var fin,fout: textfile;
-	n: integer;
 	realFile: typedRealFile;
 begin
 	try
@@ -18,7 +17,7 @@ begin
 		reset(fin);
 		assignfile(fout,ParamStr(2));
 		rewrite(fout);
-		assignfile(realFile,'inputTyped.pas');
+		assignfile(realFile,'inputTyped.dat');
 		textIntoTyped(fin,realFile);
 		printTypedFIle(realFile, fout);
 		insertLastPositive(realFile);
