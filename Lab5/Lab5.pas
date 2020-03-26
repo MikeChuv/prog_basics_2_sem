@@ -29,7 +29,7 @@ begin
 		closefile(fin);
 		closefile(fout);
 	except
-		//on System.IndexOutOfRangeException do writeln('Недостаточно параметров');
+		on System.IndexOutOfRangeException do writeln('Недостаточно параметров');
 		on System.IO.FileNotFoundException do writeln('Невозможно открыть файл');
 	end;  
 end.
