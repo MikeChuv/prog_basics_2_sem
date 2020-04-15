@@ -1,7 +1,7 @@
 unit mySort;
 
 interface
-type 	arrayElement = string;
+type 	arrayElement = integer;
 		myArray = array of arrayElement;
 		sortFunction = procedure(var x: myArray);
 
