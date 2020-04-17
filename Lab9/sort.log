@@ -1,0 +1,74 @@
+directMerge ForwardIntegers1000.txt
+00.237
+
+directMerge ForwardIntegers5000.txt
+00.331
+
+directMerge ForwardIntegers10000.txt
+00.487
+
+directMerge ForwardIntegers20000.txt
+00.733
+
+directMerge BackwardIntegers1000.txt
+00.210
+
+directMerge BackwardIntegers5000.txt
+00.359
+
+directMerge BackwardIntegers10000.txt
+00.433
+
+directMerge BackwardIntegers20000.txt
+00.716
+
+directMerge RandomIntegers1000.txt
+00.221
+
+directMerge RandomIntegers5000.txt
+00.313
+
+directMerge RandomIntegers10000.txt
+00.443
+
+directMerge RandomIntegers20000.txt
+00.749
+
+####################################################
+naturalMerge ForwardIntegers1000.txt
+00.155
+
+naturalMerge ForwardIntegers5000.txt
+00.092
+
+naturalMerge ForwardIntegers10000.txt
+00.100
+
+naturalMerge ForwardIntegers20000.txt
+00.125
+
+naturalMerge BackwardIntegers1000.txt
+00.189
+
+naturalMerge BackwardIntegers5000.txt
+00.303
+
+naturalMerge BackwardIntegers10000.txt
+00.430
+
+naturalMerge BackwardIntegers20000.txt
+00.691
+
+naturalMerge RandomIntegers1000.txt
+00.204
+
+naturalMerge RandomIntegers5000.txt
+00.310
+
+naturalMerge RandomIntegers10000.txt
+00.424
+
+naturalMerge RandomIntegers20000.txt
+00.680
+
+####################################################

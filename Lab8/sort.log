@@ -1,185 +1,65 @@
-bubbleSort ForwardIntegers1000.txt
-00.002
-
-bubbleSort ForwardIntegers5000.txt
-00.033
-
-bubbleSort ForwardIntegers10000.txt
-00.132
-
-bubbleSort ForwardIntegers20000.txt
-00.522
-
-bubbleSort BackwardIntegers1000.txt
-00.004
-
-bubbleSort BackwardIntegers5000.txt
-00.085
-
-bubbleSort BackwardIntegers10000.txt
-00.356
-
-bubbleSort BackwardIntegers20000.txt
-01.413
-
-bubbleSort RandomIntegers1000.txt
-00.004
-
-bubbleSort RandomIntegers5000.txt
-00.087
-
-bubbleSort RandomIntegers10000.txt
-00.363
-
-bubbleSort RandomIntegers20000.txt
-01.440
-
-####################################################
-bubbleSortFlag ForwardIntegers1000.txt
-00.001
-
-bubbleSortFlag ForwardIntegers5000.txt
-00.000
-
-bubbleSortFlag ForwardIntegers10000.txt
-00.000
-
-bubbleSortFlag ForwardIntegers20000.txt
-00.000
-
-bubbleSortFlag BackwardIntegers1000.txt
-00.005
-
-bubbleSortFlag BackwardIntegers5000.txt
-00.126
-
-bubbleSortFlag BackwardIntegers10000.txt
-00.504
-
-bubbleSortFlag BackwardIntegers20000.txt
-01.999
-
-bubbleSortFlag RandomIntegers1000.txt
+00.007
+00.144
+00.600
+02.498
 00.006
-
-bubbleSortFlag RandomIntegers5000.txt
-00.125
-
-bubbleSortFlag RandomIntegers10000.txt
-00.515
-
-bubbleSortFlag RandomIntegers20000.txt
-02.043
-
+00.169
+00.693
+02.731
+00.009
+00.248
+00.969
+04.029
 ####################################################
-selectionSort ForwardIntegers1000.txt
-00.001
-
-selectionSort ForwardIntegers5000.txt
-00.033
-
-selectionSort ForwardIntegers10000.txt
-00.133
-
-selectionSort ForwardIntegers20000.txt
-00.524
-
-selectionSort BackwardIntegers1000.txt
-00.001
-
-selectionSort BackwardIntegers5000.txt
-00.033
-
-selectionSort BackwardIntegers10000.txt
-00.133
-
-selectionSort BackwardIntegers20000.txt
-00.539
-
-selectionSort RandomIntegers1000.txt
 00.002
-
-selectionSort RandomIntegers5000.txt
-00.032
-
-selectionSort RandomIntegers10000.txt
-00.135
-
-selectionSort RandomIntegers20000.txt
-00.562
-
+00.059
+00.118
+02.432
+00.011
+00.319
+01.219
+05.012
+00.016
+00.438
+01.783
+07.796
 ####################################################
-insertionSort ForwardIntegers1000.txt
-00.001
-
-insertionSort ForwardIntegers5000.txt
-00.000
-
-insertionSort ForwardIntegers10000.txt
-00.000
-
-insertionSort ForwardIntegers20000.txt
-00.000
-
-insertionSort BackwardIntegers1000.txt
-00.002
-
-insertionSort BackwardIntegers5000.txt
-00.054
-
-insertionSort BackwardIntegers10000.txt
-00.261
-
-insertionSort BackwardIntegers20000.txt
-00.885
-
-insertionSort RandomIntegers1000.txt
-00.002
-
-insertionSort RandomIntegers5000.txt
-00.028
-
-insertionSort RandomIntegers10000.txt
+00.004
+00.089
+00.353
+01.575
+00.004
 00.120
-
-insertionSort RandomIntegers20000.txt
-00.426
-
+00.447
+01.708
+00.004
+00.134
+00.420
+02.650
 ####################################################
-quickSort ForwardIntegers1000.txt
-00.000
-
-quickSort ForwardIntegers5000.txt
-00.000
-
-quickSort ForwardIntegers10000.txt
 00.001
-
-quickSort ForwardIntegers20000.txt
-00.000
-
-quickSort BackwardIntegers1000.txt
-00.000
-
-quickSort BackwardIntegers5000.txt
+00.031
+00.048
+00.995
+00.004
+00.090
+00.446
+01.098
+00.003
+00.064
+00.267
+01.184
+####################################################
 00.001
-
-quickSort BackwardIntegers10000.txt
-00.000
-
-quickSort BackwardIntegers20000.txt
-00.000
-
-quickSort RandomIntegers1000.txt
-00.000
-
-quickSort RandomIntegers5000.txt
-00.000
-
-quickSort RandomIntegers10000.txt
-00.000
-
-quickSort RandomIntegers20000.txt
 00.002
-
+00.002
+00.005
+00.000
+00.001
+00.002
+00.005
+00.000
+00.002
+00.003
+00.007
 ####################################################

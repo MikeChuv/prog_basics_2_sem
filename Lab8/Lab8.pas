@@ -10,7 +10,6 @@ var fin,fout,logfile: textfile;
 	thisArray: myArray;
 	start, finish: System.DateTime;
 	ts: System.TimeSpan;
-	millis: integer;
 	foutName : string;
 	testFileArray : array[1..12] of string := (
 		'ForwardIntegers1000.txt',
