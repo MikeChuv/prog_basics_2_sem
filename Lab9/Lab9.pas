@@ -10,7 +10,7 @@ var logfile: textfile;
 	start, finish: System.DateTime;
 	ts: System.TimeSpan;
 	inputFileName,outputFileName: string;
-	testFileArray : array[1..12] of string := (
+	testFileArray : array[1..16] of string := (
 		'ForwardIntegers1000.txt',
 		'ForwardIntegers5000.txt',
 		'ForwardIntegers10000.txt',
@@ -22,7 +22,11 @@ var logfile: textfile;
 		'RandomIntegers1000.txt',
 		'RandomIntegers5000.txt',
 		'RandomIntegers10000.txt',
-		'RandomIntegers20000.txt'
+		'RandomIntegers20000.txt',
+		'FilePartialOrderIntegers1000.txt',
+		'FilePartialOrderIntegers5000.txt',
+		'FilePartialOrderIntegers10000.txt',
+		'FilePartialOrderIntegers20000.txt'
 	);
 	sortAlgArray : array[1..2] of string := (
 		'directMerge',
@@ -35,7 +39,7 @@ begin
 		rewrite(logfile);
 
 		for i: integer := 1 to 2 do begin
-			for j: integer := 1 to 12 do begin
+			for j: integer := 1 to 16 do begin
 				inputFileName := 'FilesToSort\' + testFileArray[j];
 				outputFileName := 'SortedFiles\' + sortAlgArray[i] + ' '+ testFileArray[j];
 				start := System.DateTime.Now;
@@ -45,9 +49,9 @@ begin
 				end;
 				finish := System.DateTime.Now;
 				ts := finish - start;
-				writeln(logfile, sortAlgArray[i] , ' ', testFileArray[j]);
+				//writeln(logfile, sortAlgArray[i] , ' ', testFileArray[j]);
 				writeln(logfile,Format('{0:d2}.{1:d3}', ts.Seconds, ts.Milliseconds));
-				writeln(logfile);
+				//writeln(logfile);
 			end;
 			writeln(logfile,'####################################################');
 		end;

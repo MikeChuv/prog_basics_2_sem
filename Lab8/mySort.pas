@@ -1,7 +1,7 @@
 unit mySort;
 
 interface
-type 	arrayElement = string; //integer
+type 	arrayElement = integer; //integer
 		myArray = array of arrayElement;
 
   
@@ -54,11 +54,13 @@ end;
 procedure bubbleSortFlag(var x: myArray);
 var tmp: arrayElement;
 	sorted: boolean;
+	i: integer;
 begin
 	sorted := false;
+	i := 0;
 	while not sorted do begin
 		sorted := true;
-		for j: integer := 0 to High(x)-1 do begin
+		for j: integer := 0 to High(x)-i-1 do begin
 			if x[j] > x[j+1] then begin
 				tmp := x[j];
 				x[j] := x[j+1];
@@ -66,6 +68,7 @@ begin
 				sorted := false;
 			end;
 		end;
+		i += 1;
 	end;
 end;
 

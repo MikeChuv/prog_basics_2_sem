@@ -56,9 +56,9 @@ begin
 				end;
 				finish := System.DateTime.Now;
 				ts := finish - start;
-				writeln(logfile, sortAlgArray[i] , ' ', testFileArray[j]);
+				//writeln(logfile, sortAlgArray[i] , ' ', testFileArray[j]);
 				writeln(logfile,Format('{0:d2}.{1:d3}', ts.Seconds, ts.Milliseconds));
-				writeln(logfile);
+				//writeln(logfile);
 				writeArray(fout, thisArray);
 				closefile(fout);
 			end;
