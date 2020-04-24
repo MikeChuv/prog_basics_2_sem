@@ -1,5 +1,5 @@
 ﻿type 	student = record
-    		group: string[8];
+    		group: string[7];
     		studentName: record
     				sSurname, sName, sFathername: string[30]; 
     				end;
