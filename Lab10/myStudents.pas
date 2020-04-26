@@ -82,16 +82,14 @@ end;
 // сравнение целых
 function birthYearKey(stud1, stud2: student):boolean;
 begin
-	if stud1.birthYear > stud2.birthYear then result := true
-	else result := false;
+	result := stud1.birthYear > stud2.birthYear;
 end;
 
 
 // сравнение строк
 function groupKey(stud1, stud2: student):boolean;
 begin
-	if stud1.group > stud2.group then result := true
-	else result := false;
+	result := stud1.group > stud2.group;
 end;
 
 procedure quickSort(var x: studentArray; start, stop: integer; isGreater:comparefunc);
