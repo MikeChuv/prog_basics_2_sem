@@ -180,7 +180,8 @@ var info: TInfo;
 begin
 	while not eof(f) do begin
 		read(f, info);
-		AddToEnd(list, info);
+		if (info > -50) and (info < 50) then
+			addToEnd(list, info);
 		end;
 end;
 
@@ -247,7 +248,7 @@ begin
 		if (p^.info mod 2 = 0) then begin
 			first := p;
 			break;
-		end  
+		end
 		else p := p^.next;
 	end;
 end;
