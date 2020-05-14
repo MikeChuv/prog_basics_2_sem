@@ -2,7 +2,7 @@
 // целые числа от -50 до +50
 // четные числа
 
-program lab11;
+program lab12;
 
 uses labUtils, myStack, myQueue, myDeque; 
 
