@@ -7,11 +7,14 @@ program lab11;
 
 uses oneDirListLib; //oneDirListLib,twoDirListLib
 
-const 	INDEX_EXCEPTION = 'Недостаточно параметров';
+const 	
+		INDEX_EXCEPTION = 'Недостаточно параметров';
 		FILE_EXCEPTION = 'Невозможно открыть файл';
+		IO_EXCEPTION = 'Попытка считывания за концом текстового файла';
 		
 
-var fin: textfile;
+var 
+	fin: textfile;
 	myList: TList;
 	inTmpStr: string;
 	thisInfo: integer;
@@ -94,6 +97,7 @@ begin
 	except
 	on System.IndexOutOfRangeException do writeln(INDEX_EXCEPTION);
 	on System.IO.FileNotFoundException do writeln(FILE_EXCEPTION);
+	on System.IO.IOException do writeln(IO_EXCEPTION);
 	end;
 	
 end.
