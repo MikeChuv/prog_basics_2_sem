@@ -37,16 +37,20 @@ begin
 			writeln('Введите несколько чисел для добавления в начало списка. Ввод оканчивается вещественным числом или символом');
 			readln(inTmpStr);
 			while integer.TryParse(inTmpStr,thisInfo) do begin
-				writelnFormat('Преобразовано к целому: {0}',thisInfo);
-				addToBegin(myList, thisInfo);
+				//writelnFormat('Преобразовано к целому: {0}',thisInfo);
+				if (thisInfo > -50) and (thisInfo < 50) then
+					addToBegin(myList, thisInfo)
+				else writeln('Число вне границ диапазона. Не добавлено.');
 				readln(inTmpStr);
 			end;
-			writeln('Ввод и добавление в начала окончены.');
+			writeln('Ввод и добавление в начало окончены.');
 			writeln('Введите несколько чисел для добавления в конец списка. Ввод оканчивается вещественным числом или символом');
 			readln(inTmpStr);
 			while integer.TryParse(inTmpStr,thisInfo) do begin
-				writelnFormat('Преобразовано к целому: {0}',thisInfo);
-				addToEnd(myList, thisInfo);
+				//writelnFormat('Преобразовано к целому: {0}',thisInfo);
+				if (thisInfo > -50) and (thisInfo < 50) then
+					addToEnd(myList, thisInfo)
+				else writeln('Число вне границ диапазона. Не добавлено.');
 				readln(inTmpStr);
 			end;
 			writeln('Ввод и добавление в конец окончены.');
