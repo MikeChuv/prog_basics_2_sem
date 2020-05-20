@@ -290,7 +290,8 @@ var info: TInfo;
 begin
 	while not eof(f) do begin
 		read(f, info);
-		addByCondition(list, info);
+		if (info > -50) and (info < 50) then
+			addByCondition(list, info);
 	end;
 end;
 
